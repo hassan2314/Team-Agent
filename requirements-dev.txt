@@ -1,0 +1,4 @@
+# Local / CI tooling
+-r requirements.txt
+flake8>=7.0.0
+pytest>=8.0.0

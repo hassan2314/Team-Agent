@@ -30,7 +30,6 @@ repo_scout = Agent(
     tools=[get_repo_info],
 )
 
-# Temporary: single-agent while learning
 root_agent = Agent(
     name="research_coordinator",
     model="gemini-3.1-flash-lite",

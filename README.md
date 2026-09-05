@@ -56,8 +56,8 @@ agent-team/
 ## Setup
 
 ```bash
-git clone <your-repo-url>
-cd agent-team
+git clone https://github.com/hassan2314/Team-Agent.git
+cd Team-Agent
 
 python -m venv .venv
 # bash/zsh:
@@ -66,8 +66,8 @@ source .venv/bin/activate
 # source .venv/bin/activate.fish
 
 pip install -r requirements.txt
-# Recommended if you use AQ.* Gemini keys:
-pip install -U "google-genai>=2.22.0"
+# Optional: lint + tests tooling
+# pip install -r requirements-dev.txt
 ```
 
 Create your env file:
@@ -127,6 +127,15 @@ A successful run typically returns a brief with:
 - Multi-**tool** agents vs multi-**agent** teams (`sub_agents` + delegation)
 - Writing LLM-friendly tool docstrings and structured `dict` returns
 - Wiring real APIs into ADK agents for portfolio-ready demos
+
+## Tests
+
+```bash
+pip install -r requirements-dev.txt
+pytest -q
+```
+
+CI runs the same lint + tests on Python 3.12 via GitHub Actions.
 
 ## License
 
